@@ -202,6 +202,7 @@ svg text:nth-child(12) {animation-delay: 5.5s;}
   .slide.x {
     width: 300px;
     height: 300px;
+    background-image: url('/img/pf1.jpg');
     -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
   } 
@@ -227,6 +228,7 @@ svg text:nth-child(12) {animation-delay: 5.5s;}
   .slide.y {
     width: 300px;
     height: 300px;
+    background-image: url('/img/pf2.jpg');
     -webkit-transform: rotateX(90deg);
             transform: rotateX(90deg);
   } 
@@ -248,6 +250,7 @@ svg text:nth-child(12) {animation-delay: 5.5s;}
   .slide.z {
     width: 300px;
     height: 300px;
+    background-image: url('/img/pf5.png');
     -webkit-transform: rotateX(0);
             transform: rotateX(0);
   } 
