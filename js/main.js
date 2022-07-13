@@ -189,10 +189,10 @@ $(function(){
     CY  : mouse.CY
   },
   imags = [
-    '../img/pf1.jpg',
-    '../img/pf2.jpg',
-    '../img/pf3.jpg',
-    '../img/pf4.jpg',  
+    'img/pf1.jpg',
+    'img/pf2.jpg',
+    'img/pf3.jpg',
+    'img/pf4.jpg',  
   ];
 
   $('.block').on('mousemove', function(e) {
