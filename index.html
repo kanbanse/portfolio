@@ -20,6 +20,17 @@
 </head>
 <body translate="no" id="body" class="dark-mode">
     <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode" id="dlas"><i class="fas fa-adjust"></i> </button>
+    <div class="mb_GNB">
+      <nav>
+        <ul>
+            <li><a href="#HOME">HOME,PORTFOLIO</a></li>
+            <li><a href="#WEB">WEB</a></li>
+            <li><a href="#GRAPHIC">GRAPHIC</a></li>
+            <li><a href="#SKILLS">SKILLS</a></li>
+            <!-- <li><a href="#PORTFOLIO">PORTFOLIO</a></li> -->
+            <li><a href="#CONTANT">CONTANT US</a></li>
+        </ul>
+    </div>
     <div class="wrap">
     <header>
         <div class="center_box">
@@ -37,9 +48,23 @@
                     <text x="430" y="50%">o</text>
                     <text x="470" y="50%">k</text>
                 </svg>
+              </div>
+            <div class="mb_logo">
+              <svg width=300 height=110 viewBox="0 0 400 150">
+                  <text x="0" y="50%">K</text>
+                  <text x="25" y="50%">a</text>
+                  <text x="50" y="50%">n</text>
+                  <text x="75" y="50%">g</text>
+                  <text x="115" y="50%">B</text>
+                  <text x="140" y="50%">a</text>
+                  <text x="165" y="50%">n</text>
+                  <text x="200" y="50%">S</text>
+                  <text x="225" y="50%">e</text>
+                  <text x="250" y="50%">o</text>
+                  <text x="275" y="50%">k</text>
+              </svg>
             </div>
             <div class="GNB">
-              <div class="treM"><a href="#"><img src="img/Hamburger_icon.svg" alt="메뉴버튼"></a></div>
                 <nav>
                     <ul>
                         <li><a href="#HOME">HOME,PORTFOLIO</a></li>
@@ -50,7 +75,12 @@
                         <li><a href="#CONTANT">CONTANT US</a></li>
                     </ul>
                 </nav>
-                <div class="hemburger"></div>
+                <div id="nav-icon1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+             
             </div>
         </div>
     </header>
@@ -143,7 +173,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- #!" onclick="window.open('http://yeongjae9501.dothome.co.kr/outback_m', '_blank', 'width=480 height=740,location=no,menubar=no,status=no,toolbar=no') -->
                     </div>
                     <div class="s1_menu">
                         <h2>리뉴얼 홈페이지1</h2>   
@@ -153,7 +183,7 @@
                         <p>주조색 : </p>
                         <p> 작업 스킬 : HTML, CSS, JQuery, 일러스트, 포토샵 </p>
                         <p>특징 : PC 버전으로 작업을 함 </p>
-                        <div class="site"><a href="#">바로가기</a></div>
+                        <div class="site"> <a href="http://kangbs.dothome.co.kr/sm/">바로보기</a></div>
                     </div>
                 </div>
             </div>
@@ -162,48 +192,48 @@
         <div class="s_nbg">
         <div class="center_box">
             <div class="sec sec2">
-                <div class="sec_grid">
-                <div class="s2_menu">
-                    <h2>리뉴얼 홈페이지2</h2>   
-                    <p>사이트 : 일룸</p>
-                    <p>벤치 마킹 : 제네시스, 뮤고박스</p>
-                    <p>작업시간 : 약 6일 소모</p>
-                    <p>주조색 : </p>
-                    <p> 작업 스킬 : HTML, CSS, JQuery, 일러스트, 포토샵 </p>
-                    <p>특징 : PC 버전과 모바일버전 작업을 함 </p>
-                    <div class="site"><a href="#">바로가기</a></div>
-                </div>
-                <div class="s2_pic">
-                    <div class="s2_imgbx s2ib1">
-                        <div class="wrapper">
-                            <div class="laptop" id="laptop">
-                              <img src="img/pc (2).png" alt="laptop1">
-                             <div class="laptop-inner" id="laptop-inner-1">
-                                <img src="img/s2.png" alt="inner-content1">
-                             </div>
-                              <!-- laptop inner div end -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="s2_imgbx s2ib2">
-                        <div class="wrapper">
-                            <div class="laptop3" id="laptop">
-                              <img src="img/IPHONE.png" alt="laptop1">
-                             <div class="laptop-inner3" id="laptop-inner-1">
-                                <img src="img/s2-1.png" alt="inner-content1">
-                             </div>
-                              <!-- laptop inner div end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="s2_tab">
-                  <ul>
-                      <li><a href="#">PC화면으로 보기</a></li>
-                      <li><a href="#">모바일 화면으로 보기</a></li>
-                  </ul>
+                <div class="sec_grid">  
+                  <div class="s2_menu">
+                      <h2>리뉴얼 홈페이지2</h2>   
+                      <p>사이트 : 일룸</p>
+                      <p>벤치 마킹 : 제네시스, 뮤고박스</p>
+                      <p>작업시간 : 약 6일 소모</p>
+                      <p>주조색 : </p>
+                      <p> 작업 스킬 : HTML, CSS, JQuery, 일러스트, 포토샵 </p>
+                      <p>특징 : PC 버전과 모바일버전 작업을 함 </p>
+                      <div class="site"> <a href="#!" onclick="window.open('http://kangbs.dothome.co.kr/ilroom/', '_blank', 'width=480 height=800,location=no,menubar=no,status=no,toolbar=no')">바로가기</a></div>
+                  </div>
+                  <div class="s2_pic">
+                      <div class="s2_imgbx s2ib1">
+                          <div class="wrapper">
+                              <div class="laptop" id="laptop">
+                                <img src="img/pc (2).png" alt="laptop1">
+                              <div class="laptop-inner" id="laptop-inner-1">
+                                  <img src="img/s2.png" alt="inner-content1">
+                              </div>
+                                <!-- laptop inner div end -->
+                              </div>
+                          </div>
+                      </div>
+                      <div class="s2_imgbx s2ib2">
+                          <div class="wrapper">
+                              <div class="laptop3" id="laptop">
+                                <img src="img/IPHONE.png" alt="laptop1">
+                              <div class="laptop-inner3" id="laptop-inner-1">
+                                  <img src="img/s2-1.png" alt="inner-content1">
+                              </div>
+                                <!-- laptop inner div end -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="s2_tab">
+                    <ul>
+                        <li><a href="#">PC화면으로 보기</a></li>
+                        <li><a href="#">모바일 화면으로 보기</a></li>
+                    </ul>
+                  </div>
               </div>
-            </div>
           </div>
         </div>
         </div>
@@ -234,7 +264,7 @@
                     <p>주조색 : </p>
                     <p> 작업 스킬 : HTML, CSS, JQuery, 일러스트, 포토샵 </p>
                     <p>특징 : 모바일 버전으로 작업을 함 </p>
-                    <div class="site"><a href="#">바로가기</a></div>
+                    <div class="site"><a href="#!" onclick="window.open('http://kangbs.dothome.co.kr/Mbver/', '_blank', 'width=480 height=800,location=no,menubar=no,status=no,toolbar=no')">바로가기</a></div>
                 </div>
                 </div>
             </div>
@@ -252,23 +282,23 @@
                     <div class="swiper mySwiper1" >
                         <div class="swiper-wrapper">
                           <div class="swiper-slide "data="1,북커버(BOOK COVER) ,Company of One, 포토샵 &일러스트레이터, 깔끔하고 귀여운 느낌의 디자인">
-                            <a href="img/big.jpg"><p><b>
-                            <img src="img/big.png" />
+                            <a href="img/big1.jpg"><p><b>
+                            <img src="img/big1.png" />
                             </b><i>자세히보기</i></p></a>
                           </div>
                           <div class="swiper-slide">
-                            <a href="img/big2.jpg"><p><b>
-                            <img src="img/big2.png" />
-                            </b><i>자세히보기</i></p></a>
+                            <a href="img/big2.jpg">
+                              <p>
+                                <b>
+                                  <img src="img/big2.png" />
+                                </b>
+                                <i>자세히보기</i>
+                              </p>
+                            </a>
                           </div>
                           <div class="swiper-slide">
                             <a href="img/big3.jpg"><p><b>
                             <img src="img/big3.png" />
-                            </b><i>자세히보기</i></p></a>
-                          </div>
-                          <div class="swiper-slide" data="1,북커버(BOOK COVER) ,Company of One, 포토샵 &일러스트레이터, 깔끔하고 귀여운 느낌의 디자인">
-                            <a href="img/big7.jpg"><p><b>
-                            <img src="img/big7.png" />
                             </b><i>자세히보기</i></p></a>
                           </div>
                           <div class="swiper-slide">
@@ -297,13 +327,18 @@
                             </b><i>자세히보기</i></p></a>
                           </div>
                           <div class="swiper-slide"data="1,북커버(BOOK COVER) ,Company of One, 포토샵 &일러스트레이터, 깔끔하고 귀여운 느낌의 디자인">
-                            <a href="img/big6.jpg"><p><b>
-                            <img src="img/big6.png" />
+                            <a href="img/big9.jpg"><p><b>
+                            <img src="img/big9.png" />
                             </b><i>자세히보기</i></p></a>
                           </div>
                           <div class="swiper-slide">
-                            <a href="img/big6.jpg"><p><b>
-                            <img src="img/big6.png" />
+                            <a href="img/big10.jpg"><p><b>
+                            <img src="img/big10.png" />
+                            </b><i>자세히보기</i></p></a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="img/big11.jpg"><p><b>
+                            <img src="img/big11.png" />
                             </b><i>자세히보기</i></p></a>
                           </div>
                         </div>
@@ -313,9 +348,9 @@
                 <div class="popup">
                     <div class="container">
                         <div class="graphic"></div>
-                        <div class="txt">
+                        <!-- <div class="txt">
 
-                        </div>
+                        </div> -->
                     </div>
                     <div class="close">
                         <a href="#">
@@ -439,6 +474,63 @@
 
                     <!-- <p>Pure CSS and SVG animation</p> -->
                 </div>
+                <div class="mb_skils">
+                  <div class="progress">
+                    <h2>Our Skils</h2>
+                    <div class="prog">
+                      <span class="title">HTML</span>
+                      <div><span class="pro" data-prog="85"></span>
+                      </div>
+                    </div>
+                    <div class="prog">
+                      <span class="title">Css</span>
+                      <div><span class="pro" data-prog="75"></span>
+                      </div>
+                    </div>
+                    <div class="prog">
+                      <span class="title">JS</span>
+                      <div><span class="pro" data-prog="55"></span>
+                      </div>
+                    </div>
+                    <div class="prog">
+                      <span class="title">XD</span>
+                      <div><span class="pro" data-prog="75"></span>
+                      </div>
+                    </div>
+                    <div class="prog">
+                      <span class="title">FIGMa</span>
+                      <div><span class="pro" data-prog="65"></span>
+                      </div>
+                    </div>
+                    <div class="prog">
+                      <span class="title">Pre</span>
+                      <div><span class="pro" data-prog="70"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  var progNum = Array.from(document.querySelectorAll(".pro"));
+
+                    function progress(i) {
+                        var progWidth = 1;
+                        setInterval(function() {
+                            if(progWidth < progNum[i].getAttribute("data-prog")) {
+                                progWidth += 1
+                            }
+                            progNum[i].style.width = progWidth + "%"
+                            progNum[i].textContent = progWidth + "%"
+                        },50)
+                    }
+
+                    window.onload = function() {
+                        setTimeout(function(){progress(0)},0)
+                        setTimeout(function(){progress(1)},500)
+                        setTimeout(function(){progress(2)},900)
+                        setTimeout(function(){progress(3)},1300)
+                        setTimeout(function(){progress(4)},1600)
+                    }
+                </script>
             </div>
                 <div class="s6_bg">
                     <div class="night">

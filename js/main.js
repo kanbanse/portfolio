@@ -1,6 +1,37 @@
 $(function(){ 
+  
   var win_width=$(window).width();
   if (win_width>1367){
+        var sw=0
+      $('#nav-icon1').click(function(){
+        if(sw==0){
+            sw=1;
+    $(this).toggleClass('open');
+        $('.mb_GNB').stop().animate({
+            right:0,
+            // overflowY:hidden
+        });
+        $('html,body').css('overflow-y','hidden');
+        }else{
+            sw=0;
+            $(this).removeClass('open');
+            $('.mb_GNB').stop().animate({
+                right:'-100%'
+            });
+        }
+    });
+    $('.gnb nav >ul >li >a').click(function(){
+        if($(this).attr('class') !='active'){
+            $('.mb_GNB nav > ul > li> a').removeClass('active');
+            $(this).addClass('active');
+            $('.mb_GNB nav ul li ul').slideUp();
+            $(this).next().slideDown();
+        }else{
+            $(this).removeClass('active');
+            $(this).next().slideUp();
+            
+        }
+    });
      
 
     var laptopsInner = document.querySelectorAll('.wrapper .laptop-inner');
@@ -52,26 +83,12 @@ $(function(){
     centeredSlides:true,
     effect: "coverflow",
     breakpoints:{
-      480:{
-        slidesPerView: 3,
-      
+      1280:{
+        slidesPerView:4,
+        spaceBetween:10,
+        centeredSlides:true
       },
-      768:{
-        slidesPerView:2,
-        spaceBetween:20,
-        centeredSlides:false
-
-      },
-      1024:{
-        slidesPerView:3,
-        spaceBetween:20,
-        centeredSlides:false
-
-      },
-      1200:{
-
-      },
-
+     
     },
     grabCursor: true,
     centeredSlides: true,
@@ -79,14 +96,15 @@ $(function(){
     coverflowEffect: {
       rotate: 50,
       stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
+      depth: 70,
+      modifier:1.2,
+      slideShadows:false,
     },
     pagination: {
       el: ".swiper-pagination",
     },
   });
+
 
   // popup(팝업)
   var img_num=0;
@@ -109,18 +127,18 @@ $(function(){
       //str[2]=Company of One
       //str[3]=포토샵 & 일러스트레이터
       //str[4]=깔끔하고 귀여운 느낌의 디자
-      var str=txt_addr.split(',',5); 
-      var txt_str='<div class="slide_des"><div class="slide_title"><i>'+str[0]+'</i>'+str[1]+'</div><div class="slide_sub_title">제목</div><div class="slide_content">'+str[2]+'</div><div class="slide_sub_title">스킬</div><div class="slide_content">'+str[3]+'</div><div class="slide_sub_title">컨셉</div><div class="slide_content">'+str[4]+'</div></div>';
-      // $('header').hide();
+      // var str=txt_addr.split(',',5); 
+      // var txt_str='<div class="slide_des"><div class="slide_title"><i>'+str[0]+'</i>'+str[1]+'</div><div class="slide_sub_title">제목</div><div class="slide_content">'+str[2]+'</div><div class="slide_sub_title">스킬</div><div class="slide_content">'+str[3]+'</div><div class="slide_sub_title">컨셉</div><div class="slide_content">'+str[4]+'</div></div>';
+      $('header').hide();
       // $('.graphic').empty();
       // $('.graphic').append(img_addr);
       // $('#dlas').css('left','5');
       // $('.popup').show();
-      $('button').css('left','5%').css('top','10%');
+      $('#dlas').css('left','5%').css('top','10%');
       $('.graphic').empty();
-      $('.txt').empty();
+      // $('.txt').empty();
       $('.graphic').append(img_addr);
-      $('.txt').append(txt_str);
+      // $('.txt').append(txt_str);
       $('.popup').show();
       $('html,body').css('overflow-y','hidden');
 
@@ -131,7 +149,7 @@ $(function(){
       e.stopPropagation();
       $('.popup').hide();
       $('header').show();
-      $('button').css('left','initial').css('top','30%').css('right','5%');
+      $('#dlas').css('left','initial').css('top','30%').css('right','5%');
       $('html,body').css('overflow-y','visible');
   });
   //팝업창의 오른쪽버튼
@@ -297,17 +315,31 @@ $(function(){
 
 
 var swiper = new Swiper(".swiper", {
-  centeredSlides:true,
   effect: "coverflow",
   breakpoints:{
-    480:{
-      slidesPerView: 3,
-    
+  
+
+    360:{
+      slidesPerView: 2,
+      coverflowEffect: {
+        rotate: 50,
+        // stretch: 700,
+        depth: 2000,
+        modifier: 100,
+        slideShadows: true,
+      },
     },
     768:{
-      slidesPerView:2,
-      spaceBetween:20,
-      centeredSlides:false
+      slidesPerView:3,
+      // spaceBetween:20,
+      centeredSlides:true,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 00,
+        depth: 2,
+        modifier: 1,
+        slideShadows: false,
+      },
 
     },
     1024:{
@@ -323,11 +355,12 @@ var swiper = new Swiper(".swiper", {
   },
   grabCursor: true,
   centeredSlides: true,
+  loop:true,
   slidesPerView: "auto",
   coverflowEffect: {
     rotate: 50,
-    stretch: 0,
-    depth: 100,
+    stretch: 00,
+    depth: 2,
     modifier: 1,
     slideShadows: true,
   },
@@ -353,7 +386,7 @@ $('.swiper-slide').click(function(e){
     $('.graphic').append(img_addr);
     // $('#dlas').css('left','5');
     $('.popup').show();
-    $('button').css('left','5%').css('top','10%');
+    $('#dlas').css('left','5%').css('top','10%');
 });
 //팝업창의 닫기버튼
 $('.popup .close').click(function(e){
@@ -361,7 +394,7 @@ $('.popup .close').click(function(e){
     e.stopPropagation();
     $('.popup').hide();
     $('header').show();
-    $('button').css('left','initial').css('top','30%').css('left','5%');
+    $('#dlas').css('left','initial').css('top','30%').css('left','5%');
 });
 //팝업창의 오른쪽버튼
 $('.popup .nextBtn').click(function(e){
@@ -397,6 +430,48 @@ $('nav ul li a').click(function(e){
   $('html,body').stop().animate({
     scrollTop:$($anchor.attr('href')).offset().top
   },1000)
+})
+
+// 스위치
+$('.mb_GNB').css({
+  right:'-100%'
+})
+var sw=0
+	$('#nav-icon1').click(function(){
+    if(sw==0){
+        sw=1;
+$(this).toggleClass('open');
+    $('.mb_GNB').stop().animate({
+        right:0
+    });
+    $('html,body').css('overflow-y','hidden');
+    }else{
+        sw=0;
+        $(this).removeClass('open');
+        $('.mb_GNB').stop().animate({
+            right:'-100%'
+        });
+        $('html,body').css('overflow-y','visible');
+    }
+});
+$('.mb_GNB nav >ul >li >a').click(function(){
+    if($(this).attr('class') !='active'){
+        $('.mb_GNB nav > ul > li> a').removeClass('active');
+        $(this).addClass('active');
+        $('.mb_GNB nav ul li ul').slideUp();
+        $(this).next().slideDown();
+    }else{
+        $(this).removeClass('active');
+        $(this).next().slideUp();
+    }
+});
+$('.mb_GNB nav > ul >li >a').click(function(){
+  $('.mb_GNB').stop().animate({
+    right:'-100%',
+  })
+  $('html,body').css('overflow-y','visible');
+  $('#nav-icon1').removeClass('open');
+  sw=0
 })
   
 // 프로필
@@ -478,6 +553,8 @@ var cSlide = $('.banseok #banseok-'+$(this).attr('id'));
 })
 )
 })
+
 }
+
 
 });
